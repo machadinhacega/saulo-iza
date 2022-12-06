@@ -17,6 +17,9 @@
 
 
 
+
+
+
 <body>
 <section class="abertura">
     <img id="tatoo-dia" src="./assets/img/tattoo-dia.png" alt="">
@@ -53,7 +56,7 @@
         <p class="tituloA">Dress code</p>
         <p class="textoA">roupas que não precisem passar</p>
     </div>
-    <div id="botao-espaco"><a href="#" class="button">Confirmar presença</a></div>
+    <div id="botao-espaco"><a href="https://forms.gle/xpZFCP8pMqon7TPM9" class="button">Confirmar presença</a></div>
 </section>
 
 <div class="separador"> <img src="./assets/img/sol.png" alt=""></div>
@@ -66,8 +69,16 @@
     <div class="flex"><p class="tituloA">Lista de presentes</p></div>
     <p class="textoA">Vem de pix:</p>
     <div class="qrcode"><img src="./assets/img/qrcode.png" alt=""></div>
-    <div id="botao-qrcode"><a href="#" class="button" id="button2">copiar código</a></div>
+    <div class="botao-qrcode" onclick="copyToClickBoard()"><button class="button" id="button2">copiar código</button></div>
+    <p id="chave">chave pix aqui</p>
 </div>
+
+<script>
+ function copyToClickBoard(){
+    var content = document.getElementById('chave').innerHTML;
+    navigator.clipboard.writeText(content) 
+}
+</script>
 
 
 <section class="lista-presentes">
@@ -96,6 +107,9 @@
         <p>R$ 50,00</p>
     </div>
 </section>
+
+
+
 
 
 </body>
