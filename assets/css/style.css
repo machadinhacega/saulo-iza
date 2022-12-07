@@ -1,13 +1,143 @@
-:root {
-    --main-color-1: #636565;
-    --main-color-2: #8B8A8A;
-    --main-color-3: #971919;
-}
+/* :root {
+    --color-1: #636565;
+    --color-2: #8B8A8A;
+    --color-3: #971919;
+    --color-4: #690c0c;
 
+} */
+
+  
 body {
     font-family: 'Armata', sans-serif;
     background-image: url(../img/ONDAS.png);
 }
+
+
+
+/* DARK MODE */
+
+:root {
+    --color-1: #636565;
+    --color-2: #e7e7e7;
+    --color-3: #aa2020;
+    --color-4: #690c0c;
+    --color-5: #8B8A8A;
+    --light: #cccccc;
+    --dark: #151515;
+}
+
+#theme-switcher {
+    display: none;
+}
+
+#app-container {
+    margin-top: -5rem;
+    margin-left: -.5rem;
+    width: 100vw;
+  }
+
+
+.theme-switcher-area {
+    border: 1px solid var(--light);
+    background-color: var(--dark);
+    border-radius: 2rem;
+    width: 4.5rem;
+    height: 2.5rem;
+    padding: 0.2rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    cursor: pointer;
+}
+
+.theme-switcher-button {
+    position: relative;
+    display: block;
+    background: #f1aa02;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    border: 2px dashed var(--dark);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+.theme-switcher-button::after {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    content: "";
+    background-color: var(--dark);
+    border-radius: 50%;
+    opacity: 0;
+    transition: 0.3s;
+  }
+
+#theme-switcher:checked + #app-container .theme-switcher-button {
+    transform: translateX(100%);
+    border: none;
+}
+
+#theme-switcher:checked + #app-container .theme-switcher-button::after {
+    opacity: 1;
+}
+
+
+
+
+
+
+#theme-switcher + #app-container {
+    color: var(--color-1);
+}
+
+#theme-switcher + #app-container .button{color:var(--color-1);}
+#theme-switcher:checked + #app-container .button{color:var(--color-1);}
+
+
+#theme-switcher + #app-container .button:hover{color:var(--color-2);}
+#theme-switcher:checked + #app-container .button:hover{color:var(--color-2);}
+
+
+#theme-switcher + #app-container .textoA {color: var(--color-5);}
+#theme-switcher:checked + #app-container .textoA{color:var(--color-2);}
+
+
+#theme-switcher + #app-container .textoB {color: var(--color-3);}
+#theme-switcher:checked + #app-container .textoB {color: var(--color-3);}
+
+
+
+#theme-switcher:checked + #app-container #tattoo-noite{display:block ; margin-top: 5rem; width: 220px; height: auto;}
+#theme-switcher + #app-container #tattoo-noite{display: none;}
+
+#theme-switcher + #app-container #tattoo-dia{display:block; margin-top: 5rem; width: 220px; height: auto;}
+#theme-switcher:checked + #app-container #tattoo-dia{display: none;}
+
+
+
+
+#theme-switcher:checked + #app-container {
+    background-image: url(../img/ONDAS-dark.png);
+    background-color: #0D0D0D;
+    color: var(--color-2);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* DARK MODE */
+
+
+
 
 
 .abertura {
@@ -22,14 +152,17 @@ body {
     margin-right: 1rem;
 }
 
+
+
+
+
 .tituloA {  
     font-family: 'Homemade Apple';
     font-style: normal;
     font-weight: 400;
-    font-size: 36px;
+    font-size: 38px;
     line-height: 78px;
     text-align: center; 
-    color: var(--main-color-1);
 }
 
 .data {
@@ -39,7 +172,6 @@ body {
     font-size: 15px;
     line-height: 16px;
     text-align: center;
-    color: var(--main-color-1);
     margin-top: -3.4rem;
     margin-bottom: 2rem;
     
@@ -54,7 +186,6 @@ body {
     /* or 14px */
     text-align: center;
     letter-spacing: 0.035em;
-    color: var(--main-color-2);
 }
 
 .abertura-texto .textoA {
@@ -64,7 +195,6 @@ body {
 
 .textoB {
     font-size: 16px;
-    color: var(--main-color-3);
 }
 
 
@@ -111,12 +241,16 @@ body {
     margin-bottom: 1rem;
 }
 
+.mapouter {position:relative;text-align:right;width:90vw;height:70vw;}
+.gmap_canvas {overflow:hidden;background:none!important;width:90vw;height:70vw;}
+.gmap_iframe {width:90vw!important;height:70vw!important;}
+
 .button {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    background-color: var(--main-color-2);
+    background-color: var(--color-2);
     color: #FFFFFFA6;
 
     text-transform: uppercase;
@@ -217,6 +351,14 @@ a {
 .presente img {
     width: 90px;
     height: auto;
+    border-radius: 20px;
+    border: .5px solid #fff;
+    background-color: #fff;
+}
+
+.presente img:hover {
+    cursor: pointer;
+    border: .5px solid var(--color-2);
 }
 
 .lista-presentes p {
@@ -229,29 +371,57 @@ a {
     width: 90px;
     height: 24px;
 
-    border: 1px solid #8B8A8A;
+    border: 1px solid var(--color-2);
     border-radius: 15px;
+}
+
+.ultimo-separador{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+}
+
+#ultimo-texto{
+    font-size: 1rem;
 }
 
 
 
+
 /* desktop version */
-@media (min-width:500px) {
+@media (min-width:1080px) {
+
+    /* #app-container{
+        width: 100%;
+    } */
+
     .abertura {
         display: block;
+        width: 100%;
     }
+
+
+    #theme-switcher + #app-container #tattoo-noite{display: none;}
+    #theme-switcher + #app-container #tattoo-dia{height: 35vw; width: auto; margin-top: 5rem; padding-top: 6vw; margin-left: 40%; margin-right: 40%;}
+
+    #theme-switcher:checked + #app-container #tattoo-dia{display: none;}
+    #theme-switcher:checked + #app-container #tattoo-noite{height: 35vw; width: auto; margin-top: 5rem; padding-top: 6vw; margin-left: 40%; margin-right: 40%;}
+
+
     .tituloA {
-        margin-top: -19rem;
+        margin-top: -23vw;
 
         font-family: 'Homemade Apple';
         font-style: normal;
         font-weight: 400;
-        font-size: 64px;
-        line-height: 138px;
+        font-size: 5vw;
+        /* line-height: 138px; */
         text-align: center;
     }
     .data{
-        margin-top: -6.5rem;
+        margin-top: -5vw;
+        font-size:1.5vw;
     }
         
 
@@ -259,33 +429,35 @@ a {
         margin-left: 25%;
         margin-right: 25%;
         width: 50%;
+        margin-top: 20vw;
+
 
     }
 
     .textoA {
-        margin-top: 14rem;
-        font-family: 'Homemade Apple';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 127%;
-        /* or 18px */
-
-        text-align: center;
-        letter-spacing: 0.035em;
+        font-size: 1.5vw;
+        letter-spacing: 0.rem;
     }
 
-    #tatoo-dia{
-        height: 25rem;
-        margin-top: -1rem;
+    .textoB {
+        font-size: 1.5vw;
+        letter-spacing: 0.rem;
+        font-weight: 600;
+    }
+
+    .separador{
+        height: 3vw;
+        margin-top: 3vw;
+        margin-bottom: 3vw;
     }
 
     .infos {
         display: block;
     }
 
-    .infos .textoA{
-        margin-top: -5rem;
+    .infos .tituloA{
+        margin-top: 4vw;
+        font-size: 3vw;
     }
 
     #textoinfocompleto{
@@ -308,10 +480,15 @@ a {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 0.5rem;
+        margin-top: 2vw;
         margin-bottom: 1rem;
         
     }
+
+    .mapouter {position:relative;text-align:right;width:600px;height:400px;}
+    .gmap_canvas {overflow:hidden;background:none!important;width:600px;height:400px;}
+    .gmap_iframe {width:600px!important;height:400px!important;}
+
 
     #botao-espaco{
         display: flex;
@@ -325,45 +502,95 @@ a {
         justify-content: center;
         align-items: center;
     
-        background-color: var(--main-color-2);
+        background-color: var(--color-2);
         color: #FFFFFFA6;
     
         text-transform: uppercase;
-        font-size: .8rem;
+        font-size: 1.5vw;
         font-weight: 500;
         
-        height: 40px;
-        width: 200px;
+        height: 4vw;
+        width: 23vw;
     
-        border-radius: 2rem;
+        border-radius: 3rem;
     
         margin-top: 1rem;
     }
 
+    .button:hover{
+        background-color: var(--color-3);
+        cursor: pointer;
+    }
+
+    .button:active {
+        background-color: var(--color-4);
+        cursor: pointer;
+    }
+
     #lembrete {
         margin-top: 2rem;
-        width: 30rem;
+        width: 40vw;
     }
 
     .presentes1 .tituloA {
-        width: 100%;
+        font-size: 4vw;
+        width: 40%;
+        margin-top: 5vw;
+    }
+
+    .presentes1 .textoA{
+        margin-top: -4vw;
+    }
+
+    .qrcode {
+        height: 15vw;
+        margin-top: -1vw;
+
+    }
+
+    #button2 {
+        font-size: 1.5vw;
+        
+        height: 4vw;
+        width: 16vw;
+    
+        border-radius: 3rem;
+    }
+
+    #button2:hover{
+        background-color: var(--color-3);
+        cursor: pointer;
+    }
+    #button2:active {
+        background-color: var(--color-4);
+        cursor: pointer;
     }
 
     .lista-presentes {
+        margin-top: 4vw;
         margin-left: 20%;
         margin-right: 20%;
     }
 
     .presente img {
-        width: 120px;
+        width: 13vw;
         height: auto;
+        margin-top: 1vw;
     }
     
     .lista-presentes p {
-        width: 120px;
-        height: 28px;
+        width: 13vw;
+        height: 3vw;
+        font-size: 1.5vw;
+        border-radius: 3vw;
+    }
+
+    .ultimo-separador{
+        margin-top: 3vw;
+    }
+
+    #ultimo-texto{
+        font-size: 2rem;
     }
 
 }
-
-
