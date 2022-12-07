@@ -10,6 +10,8 @@
 }
 
 
+/* textos */
+
 body {
     margin:0;
 
@@ -18,8 +20,6 @@ body {
     font-weight: 400;
     text-align: center;
 }
-
-
 
 .tituloA {  
     font-size: 30px;
@@ -55,73 +55,7 @@ body {
 
 
 
-/* CORES DO TEMA*/
-
-/* LIGHT */
-#dark-mode + .main {background-color:#ffffff; background-image: url(../img/ONDAS.png);}
-
-#dark-mode + .main .tituloA {color:var(--color-1);}
-#dark-mode + .main .textoA {color:var(--color-5);}
-#dark-mode + .main #data {color:var(--color-1);}
-#dark-mode + .main .destaque {color:var(--color-4);}
-#dark-mode + .main .sans-serif {color:var(--color-1);}
-#dark-mode + .main .presente p {color:var(--color-1);}
-
-.barra-final {background: linear-gradient(180deg, --color-2, #ffffff 100%);height: 1rem;}
-
-#dark-mode + .main .button{
-    background-color: var(--color-1);
-    color:var(--color-2);
-    cursor: pointer;}
-
-#dark-mode + .main .button:hover{
-    background-color: var(--color-3);
-    color:var(--color-2);
-    cursor: pointer;}
-
-#dark-mode + .main .button:active{
-    background-color: var(--color-4);
-    color:var(--color-2);
-    cursor: pointer;}
-
-
-/* DARK */
-#dark-mode:checked + .main {background-color: #0D0D0D; background-image: url(../img/ONDAS-dark.png);}
-
-#dark-mode:checked + .main .tituloA {color:var(--color-2);}
-#dark-mode:checked + .main .textoA {color:var(--color-2);}
-#dark-mode:checked + .main #data {color:var(--color-2);}
-#dark-mode:checked + .main .destaque {color:var(--color-3);}
-#dark-mode:checked + .main .sans-serif {color:var(--color-2);}
-#dark-mode:checked + .main .presente p {color:var(--color-2);}
-
-
-#dark-mode:checked + .main .button{
-    background-color: var(--color-2);
-    color:var(--dark);
-    cursor: pointer;}
-
-#dark-mode:checked + .main .button:hover{
-    background-color: var(--color-3);
-    color:var(--color-2);
-    cursor: pointer;}
-#dark-mode:checked + .main .button:active{
-    background-color: var(--color-4);
-    color:var(--color-2);
-    cursor: pointer;}
-
-/* imagem tattoo */
-#dark-mode + .main #tattoo-noite{display: none;}
-#dark-mode + .main #tattoo-dia{display:block; margin-top: 5rem; width: 220px; height: auto;}
-
-#dark-mode:checked + .main #tattoo-dia{display: none;}
-#dark-mode:checked + .main #tattoo-noite{display:block ; margin-top: 5rem; width: 220px; height: auto;}
-
-
-
-
-
-/* ALINHAMENTO */
+/* mobile first */
 
 .abertura {
     margin-top: -2.2rem;
@@ -149,9 +83,37 @@ body {
     width: 75vw;
 }
 
+#textoinfocompleto {
+    display: none;
+}
+
+.infos .espaco{
+    display: flex;
+    justify-content: center;
+    margin-top: -4rem;
+}
+
+#o-dia-que{
+    margin-left: 0.6rem;
+    margin-right: 1.8rem;
+}
+
+#tomar-uma{
+    margin-top: -.5rem;
+}
+
 .hora .textoA, .dress .textoA{
     margin-top: -3rem;
 }
+
+.local {
+    display: flex;
+    justify-content: center;
+}
+
+.mapouter {position:relative;text-align:right;width:70vw;height:60vw;}
+.gmap_canvas {overflow:hidden;background:none!important;width:70vw;height:60vw;}
+.gmap_iframe {width:70vw!important;height:60vw!important;}
 
 .lembrete, .titulo-grande{
     display: flex;
@@ -170,7 +132,6 @@ body {
     display: none;
 }
 
-
 .lista-presentes {
     display: flex;
     flex-wrap: wrap;
@@ -185,7 +146,6 @@ body {
     margin-right: .7rem;
     margin-top: 1rem;
 }
-
 
 .presente img {
     width: 90px;
@@ -214,47 +174,15 @@ body {
     border-radius: 15px;
 }
 
-
 #botao-espaco, .botao-qrcode {
     display: flex;
     justify-content: center;
 }
 
-
-
 .qrcode img {
     width:130px
 }
 
-/* MOBILE */
-#textoinfocompleto {
-    display: none;
-}
-
-.infos .espaco{
-    display: flex;
-    justify-content: center;
-    margin-top: -4rem;
-}
-
-#o-dia-que{
-    margin-left: 0.6rem;
-    margin-right: 1.8rem;
-}
-
-#tomar-uma{
-    margin-top: -.5rem;
-}
-
-
-.local {
-    display: flex;
-    justify-content: center;
-}
-
-.mapouter {position:relative;text-align:right;width:70vw;height:60vw;}
-.gmap_canvas {overflow:hidden;background:none!important;width:70vw;height:60vw;}
-.gmap_iframe {width:70vw!important;height:60vw!important;}
 
 a {
     text-decoration: none;
@@ -281,8 +209,8 @@ a {
 
 
 
-
 /* DESKTOP */
+
 @media (min-width:1080px) {
     
     #o-dia-que, #escolhemos, #tomar-uma{
@@ -393,74 +321,3 @@ a {
     }
     
 }
-
-
-
-
-
-
-
-/* BASE */
-/* <input type="checkbox" id="dark-mode" value="dark-mode-value" name="dark-mode-name" class="botao-dark"> */
-
-
-.switch {
-    position: absolute;
-    display: inline-block;
-    margin-top: 2rem;
-    width: 48px;
-    height: 23px;
-  }
-  
-  .switch input { 
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 15px;
-    width: 15px;
-    left: 1px;
-    bottom: 4.5px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: #2196F3;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
