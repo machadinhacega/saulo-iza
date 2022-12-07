@@ -235,7 +235,7 @@ a {
     /* TEXTOS */
     #casal {
         font-size: 5vw;
-        margin-top: -250px;
+        margin-top: -21vw;
     }
     #data {
         font-size: 1.5vw;
@@ -248,7 +248,7 @@ a {
         letter-spacing: 0.035em;
     } 
     .abertura .textoA {
-        margin-top: 120px;
+        margin-top: 14vw;
     }
     .textoA .destaque{
         font-size: 1.8vw;
