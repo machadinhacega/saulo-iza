@@ -1,87 +1,147 @@
-/* background */
-#dark-mode + .main {background-color:#ffffff; background-image: url(../img/ONDAS.png);}
-#dark-mode:checked + .main {background-color: #0D0D0D; background-image: url(../img/ONDAS-dark.png);}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icone e Nome da página -->
+    <link rel="icon" href="./assets/img/sol.png">
+    <title>Saulo e Iza</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Armata&family=Homemade+Apple&family=Sorts+Mill+Goudy:ital@0;1&display=swap" rel="stylesheet">
+<!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/darkmode.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 
-/* texto */
-#dark-mode + .main .tituloA {color:var(--color-1);}
-#dark-mode + .main .textoA {color:var(--color-5);}
-#dark-mode + .main #data {color:var(--color-1);}
-#dark-mode + .main .destaque {color:var(--color-4);}
-#dark-mode + .main .sans-serif {color:var(--color-1);}
-#dark-mode + .main .presente p {color:var(--color-1);}
+</head>
 
-#dark-mode:checked + .main .tituloA {color:var(--color-2);}
-#dark-mode:checked + .main .textoA {color:var(--color-2);}
-#dark-mode:checked + .main #data {color:var(--color-2);}
-#dark-mode:checked + .main .destaque {color:var(--color-3);}
-#dark-mode:checked + .main .sans-serif {color:var(--color-2);}
-#dark-mode:checked + .main .presente p {color:var(--color-2);}
+<script>
+    function copyToClickBoard(){
+        var content = document.getElementById('chave').innerHTML;
+        navigator.clipboard.writeText(content) 
+    }
+    </script>
 
-/* botões */
-#dark-mode + .main .button{
-    background-color: var(--color-1);
-    color:var(--color-2);
-    cursor: pointer;}
-#dark-mode + .main .button:hover{
-    background-color: var(--color-3);
-    color:var(--color-2);
-    cursor: pointer;}
-#dark-mode + .main .button:active{
-    background-color: var(--color-4);
-    color:var(--color-2);
-    cursor: pointer;}
 
-    #dark-mode:checked + .main .button{
-        background-color: var(--color-2);
-        color:var(--dark);
-        cursor: pointer;}
-    #dark-mode:checked + .main .button:hover{
-        background-color: var(--color-3);
-        color:var(--color-2);
-        cursor: pointer;}
-    #dark-mode:checked + .main .button:active{
-        background-color: var(--color-4);
-        color:var(--color-2);
-        cursor: pointer;}
+<body>
+    <!-- <label class="switch">
+        <input type="checkbox" checked id="dark-mode">
+        <span class="slider round"></span></label> -->
+          
+    <input type="checkbox" id="dark-mode">
 
-/* imagem tattoo */
-#dark-mode + .main #tattoo-noite{display: none;}
-#dark-mode + .main #tattoo-dia{display:block; margin-top: 5rem; width: 220px; height: auto;}
+    <div class="main">
+        <section class="abertura" >
+            <div class="tatoos">
+                <img id="tattoo-dia" src="./assets/img/tattoo-dia.png" alt="">
+                <img id="tattoo-noite" src="./assets/img/tattoo-noite.png" alt="">
+            </div>
 
-#dark-mode:checked + .main #tattoo-dia{display: none;}
-#dark-mode:checked + .main #tattoo-noite{display:block ; margin-top: 5rem; width: 220px; height: auto;}
-
-.barra-final {background: linear-gradient(180deg, --color-2, #ffffff 100%);height: 1rem;}
+            <div>
+                <p class="tituloA" id="casal">Saulo e iza</p>
+                <p class="sans-serif" id="data">15.07.23</p>
+                <div class="texto-abertura">
+                    <div class="textoA">
+                        <p>“Só há um jeito pra eu viver no mesmo espaço que você : é te amar, te respeitar, me dedicar e dar prazer.”</p>
+                        <p class="destaque">Sim, nós vamos casar...</p>
+                        <p>...e queremos compartilhar esse momento com você, até porque, como você deve saber, a gente da mó valor uma festa né.</p>
+                    </div>  
+                </div>
+            </div>
+        </section>
 
 
 
-/* botão trocar modo de cor */
-
-#dark-mode {
-    position: fixed;
-    content: "";
-    height: 20px;
-    width: 20px;
-    left: 15px;
-    top: 25px;
-    background-color: rgb(255, 255, 255);
-    -webkit-transition: .4s;
-    transition: .4s;
-    border-radius: 34px;
-    cursor: pointer;
-}
+        <div class="separador"> <img src="./assets/img/sol.png" alt=""></div>
 
 
-#dark-mode:before {
-    position: absolute;
-    content: "";
-    height: 30px;
-    width: 30px;
-    left: -5px;
-    top: -4px;
-    background-image: url(../img/dark.svg);
-    background-color: #0D0D0D;
-    -webkit-transition: .4s;
-    transition: .4s;
-    border-radius: 50%;
-}
+
+        <section class="infos">
+            <div>
+                <p class="tituloA">15 de julho</p>
+                <div class="espaco">
+                    <p class="textoA" id="o-dia-que">o dia que nós</p>
+                    <p class="textoA" id="escolhemos">escolhemos pra</p>
+                </div>
+                <p class="textoA" id="tomar-uma">tomar uma com você</p>
+                <p class="textoA" id="textoinfocompleto">o dia que nós escolhemos pra tomar uma com você</p>
+            </div>
+            <div class="hora">
+                <p class="tituloA">às 16:00</p>
+                <p class="textoA">na Chácara Daltro Vasconcelos</p>
+            </div>
+            <div class="local">
+                <div class="mapouter">
+                    <div class="gmap_canvas">
+                        <iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=chacara daltro vascon&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                        <!-- <a href="https://formatjson.org/">format json</a> -->
+                    </div>            
+                </div>
+            </div>
+            <div class="dress">
+                <p class="tituloA">Dress code</p>
+                <p class="textoA">roupas que não precisem passar</p>
+            </div>
+            <div id="botao-espaco" class="sans-serif"><a href="https://forms.gle/xpZFCP8pMqon7TPM9" target="_blank" class="button">Confirmar presença</a></div>
+        </section>
+
+
+        <div class="separador"> <img src="./assets/img/sol.png" alt=""></div>
+
+
+
+        <div class="lembrete">
+            <p class="textoA" id="lembrete"> ah, e se quiser dar um presentinho pra nossa casa nova, nós separamos algumas sugestões:</p>
+        </div>
+        <div class="presentes1">
+            <div class="titulo-grande"><p class="tituloA">Lista de presentes</p></div>
+            <p class="sans-serif">Vem de pix:</p>
+            <div class="qrcode"><img src="./assets/img/qrcode.png" alt=""></div>
+            <div class="botao-qrcode" onclick="copyToClickBoard()"><button class="button" id="button2">copiar código</button></div>
+            <p id="chave">chave pix aqui</p>    
+        </div>
+
+
+        <div class="cont-presentes">
+            <section class="lista-presentes">
+                <div class="presente">
+                    <a href="https://www.magazineluiza.com.br/fogao-consul-4-bocas-preto-com-mesa-de-vidro-e-grades-individuais-de-ferro-fundido-cfo4vae/p/he04h69ba1/ed/fg4b/" target="_blank"><img src="./assets/img/lista1.png" alt=""></a>
+                    <p>R$ 1.850,00</p>
+                </div>
+                <div class="presente">
+                    <a href="" target="_blank"><img src="./assets/img/lista2.png" alt=""></a>
+                    <p>R$ 750.000,00</p>
+                </div>
+                <div class="presente">
+                    <a href="" target="_blank"><img src="./assets/img/lista3.png" alt=""></a>
+                    <p>R$ 5.000,00</p>
+                </div>
+                <div class="presente">
+                    <a href="" target="_blank"><img src="./assets/img/lista4.png" alt=""></a>
+                    <p>R$ 28.000,00</p>
+                </div>
+                <div class="presente">
+                    <a href="" target="_blank"><img src="./assets/img/lista5.png" alt=""></a>
+                    <p>R$ 5.750,00</p>
+                </div>
+                <div class="presente">
+                    <a href="" target="_blank"><img src="./assets/img/lista6.png" alt=""></a>
+                    <p>R$ 12.000,00</p>
+                </div>
+            </section>
+
+    
+
+        </div>
+        <section class="rodape">
+            <div class="separador"> <img src="./assets/img/sol.png" alt=""></div>
+        </section>
+        <div class="barra-final"></div>
+    </div>
+    
+
+
+</body>
+
+
+
+</html>
