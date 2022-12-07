@@ -1,202 +1,137 @@
-/* :root {
-    --color-1: #636565;
-    --color-2: #8B8A8A;
-    --color-3: #971919;
-    --color-4: #690c0c;
-
-} */
-
-  
-body {
-    font-family: 'Armata', sans-serif;
-    background-image: url(../img/ONDAS.png);
-}
-
-
-
-/* DARK MODE */
-
 :root {
     --color-1: #636565;
     --color-2: #e7e7e7;
     --color-3: #aa2020;
     --color-4: #690c0c;
     --color-5: #8B8A8A;
+    --color6: #ffffff
     --light: #cccccc;
     --dark: #151515;
 }
 
-#theme-switcher {
-    display: none;
-}
 
-#app-container {
-    margin-top: -5rem;
-    margin-left: -.5rem;
-    width: 100vw;
-  }
+body {
+    margin:0;
 
-
-.theme-switcher-area {
-    border: 1px solid var(--light);
-    background-color: var(--dark);
-    border-radius: 2rem;
-    width: 4.5rem;
-    height: 2.5rem;
-    padding: 0.2rem;
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-    cursor: pointer;
-}
-
-.theme-switcher-button {
-    position: relative;
-    display: block;
-    background: #f1aa02;
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
-    border: 2px dashed var(--dark);
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-
-.theme-switcher-button::after {
-    position: absolute;
-    width: 80%;
-    height: 80%;
-    content: "";
-    background-color: var(--dark);
-    border-radius: 50%;
-    opacity: 0;
-    transition: 0.3s;
-  }
-
-#theme-switcher:checked + #app-container .theme-switcher-button {
-    transform: translateX(100%);
-    border: none;
-}
-
-#theme-switcher:checked + #app-container .theme-switcher-button::after {
-    opacity: 1;
-}
-
-
-
-
-
-
-#theme-switcher + #app-container {
-    color: var(--color-1);
-}
-
-#theme-switcher + #app-container .button{color:var(--color-1);}
-#theme-switcher:checked + #app-container .button{color:var(--color-1);}
-
-
-#theme-switcher + #app-container .button:hover{color:var(--color-2);}
-#theme-switcher:checked + #app-container .button:hover{color:var(--color-2);}
-
-
-#theme-switcher + #app-container .textoA {color: var(--color-5);}
-#theme-switcher:checked + #app-container .textoA{color:var(--color-2);}
-
-
-#theme-switcher + #app-container .textoB {color: var(--color-3);}
-#theme-switcher:checked + #app-container .textoB {color: var(--color-3);}
-
-
-
-#theme-switcher:checked + #app-container #tattoo-noite{display:block ; margin-top: 5rem; width: 220px; height: auto;}
-#theme-switcher + #app-container #tattoo-noite{display: none;}
-
-#theme-switcher + #app-container #tattoo-dia{display:block; margin-top: 5rem; width: 220px; height: auto;}
-#theme-switcher:checked + #app-container #tattoo-dia{display: none;}
-
-
-
-
-#theme-switcher:checked + #app-container {
-    background-image: url(../img/ONDAS-dark.png);
-    background-color: #0D0D0D;
-    color: var(--color-2);
-}
-
-
-
-
-
-
-
-
-
-
-
-/* DARK MODE */
-
-
-
-
-
-.abertura {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    
+    font-family: 'Homemade Apple';
+    font-style: normal;
+    font-weight: 400;
     text-align: center;
-
-    margin-top: 5rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
 }
-
-
 
 
 
 .tituloA {  
-    font-family: 'Homemade Apple';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 38px;
+    font-size: 30px;
     line-height: 78px;
-    text-align: center; 
 }
 
-.data {
-    font-family: 'Armata';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 16px;
-    text-align: center;
-    margin-top: -3.4rem;
-    margin-bottom: 2rem;
-    
+#casal {
+    font-size: 38px;
+    margin-top: 1rem;
 }
 
 .textoA {
-    font-family: 'Homemade Apple';
-    font-style: normal;
-    font-weight: 400;
     font-size: 12px;
     line-height: 130%;
-    /* or 14px */
-    text-align: center;
     letter-spacing: 0.035em;
-}
+} 
 
-.abertura-texto .textoA {
-    margin-left: 1.4rem;
-    margin-right: 1.4rem;
-}
-
-.textoB {
+.textoA .destaque{
     font-size: 16px;
 }
 
+.sans-serif {
+    font-family: 'Armata';
+    font-style: normal;
+    font-weight: 400;
+}
+
+#data {
+    font-size: 15px;
+    margin-top: -3.4rem;
+    margin-bottom: 2rem; 
+}
+
+
+
+/* CORES DO TEMA*/
+
+/* LIGHT */
+#dark-mode + .main {background-color:#ffffff; background-image: url(../img/ONDAS.png);}
+
+#dark-mode + .main .tituloA {color:var(--color-1);}
+#dark-mode + .main .textoA {color:var(--color-5);}
+#dark-mode + .main #data {color:var(--color-1);}
+#dark-mode + .main .destaque {color:var(--color-4);}
+#dark-mode + .main .sans-serif {color:var(--color-1);}
+#dark-mode + .main .presente p {color:var(--color-1);}
+
+.barra-final {background: linear-gradient(180deg, --color-2, #ffffff 100%);height: 1rem;}
+
+#dark-mode + .main .button{
+    background-color: var(--color-1);
+    color:var(--color-2);
+    cursor: pointer;}
+
+#dark-mode + .main .button:hover{
+    background-color: var(--color-3);
+    color:var(--color-2);
+    cursor: pointer;}
+
+#dark-mode + .main .button:active{
+    background-color: var(--color-4);
+    color:var(--color-2);
+    cursor: pointer;}
+
+
+/* DARK */
+#dark-mode:checked + .main {background-color: #0D0D0D; background-image: url(../img/ONDAS-dark.png);}
+
+#dark-mode:checked + .main .tituloA {color:var(--color-2);}
+#dark-mode:checked + .main .textoA {color:var(--color-2);}
+#dark-mode:checked + .main #data {color:var(--color-2);}
+#dark-mode:checked + .main .destaque {color:var(--color-3);}
+#dark-mode:checked + .main .sans-serif {color:var(--color-2);}
+#dark-mode:checked + .main .presente p {color:var(--color-2);}
+
+
+#dark-mode:checked + .main .button{
+    background-color: var(--color-2);
+    color:var(--dark);
+    cursor: pointer;}
+
+#dark-mode:checked + .main .button:hover{
+    background-color: var(--color-3);
+    color:var(--color-2);
+    cursor: pointer;}
+#dark-mode:checked + .main .button:active{
+    background-color: var(--color-4);
+    color:var(--color-2);
+    cursor: pointer;}
+
+/* imagem tattoo */
+#dark-mode + .main #tattoo-noite{display: none;}
+#dark-mode + .main #tattoo-dia{display:block; margin-top: 5rem; width: 220px; height: auto;}
+
+#dark-mode:checked + .main #tattoo-dia{display: none;}
+#dark-mode:checked + .main #tattoo-noite{display:block ; margin-top: 5rem; width: 220px; height: auto;}
+
+
+
+
+
+/* ALINHAMENTO */
+
+.abertura {
+    margin-top: -2.2rem;
+}
+
+.tatoos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
 .separador{
     display: flex;
@@ -205,138 +140,36 @@ body {
     margin-bottom: 1rem;
 }
 
-.infos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.infos .tituloA {
-    margin-top: 0rem;
-    font-size: 30px;
-}
-
-.infos .textoA{
-    margin-top: -3.5rem;
-}
-
-#textoinfocompleto {
-    display: none;
-}
-.infos .espaco{
-    display: flex;
-}
-
-#o-dia-que{
-    margin-left: 0.6rem;
-    margin-right: 1.8rem;
-}
-
-#tomar-uma{
-    margin-top: -2.2rem;
-}
-
-.local {
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.mapouter {position:relative;text-align:right;width:90vw;height:70vw;}
-.gmap_canvas {overflow:hidden;background:none!important;width:90vw;height:70vw;}
-.gmap_iframe {width:90vw!important;height:70vw!important;}
-
-.button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-color: var(--color-2);
-    color: #FFFFFFA6;
-
-    text-transform: uppercase;
-    font-size: .8rem;
-    font-weight: 500;
-    
-    height: 40px;
-    width: 200px;
-
-    border-radius: 2rem;
-
-    margin-top: 1rem;
-}
-
-a {
-    text-decoration: none;
-    list-style: none;
-}
-
-
-.lembrete {
+.texto-abertura{
     display: flex;
     justify-content: center;
 }
 
-#lembrete {
-    width: 17rem;
+.abertura .textoA {
+    width: 75vw;
 }
 
-.presentes1 {
-    display: block
+.hora .textoA, .dress .textoA{
+    margin-top: -3rem;
 }
 
-.qrcode {
+.lembrete, .titulo-grande{
     display: flex;
     justify-content: center;
 }
 
-.qrcode img {
-    width:130px
+.lembrete .textoA, .titulo-grande .tituloA{
+    width: 75vw;
 }
 
-.dress{
-    width: 100%;
-}
-
-.botao-qrcode {
-    display: flex;
-    justify-content: center;
-}
-
-#button2 {
-    font-size: .7rem;
-    font-weight: 500;
-    
-    height: 30px;
-    width: 120px;
-
-    border-radius: 2rem;
-
-    margin-top: 1rem;
-
-    border-style: none;
+.titulo-grande .tituloA{
+    line-height: 2rem;
 }
 
 #chave {
     display: none;
 }
 
-.flex {
-    display: flex;
-    justify-content: center;
-}
-
-.presentes1 .tituloA {
-    font-size: 30px;
-    line-height: 100%;
-    margin-top: 3rem;
-    width: 10rem;
-
-}
-
-.presentes1 .textoA {
-    font-family: 'Armata';
-    margin-top: -1.5rem;
-}
 
 .lista-presentes {
     display: flex;
@@ -344,13 +177,15 @@ a {
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .presente {
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: .7rem;
+    margin-right: .7rem;
     margin-top: 1rem;
 }
+
 
 .presente img {
     width: 90px;
@@ -360,246 +195,272 @@ a {
     background-color: #fff;
 }
 
-.presente img:hover {
-    cursor: pointer;
-    border: .5px solid var(--color-2);
-}
-
 .lista-presentes p {
+    font-family: 'Armata';
+    font-style: normal;
+    font-weight: 400;
+
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -.2rem;
   
-    font-size: .8rem;
+    font-size: .7rem;
     
     width: 90px;
     height: 24px;
 
-    border: 1px solid var(--color-2);
+    border: 1px solid var(--color-1);
     border-radius: 15px;
 }
 
-.ultimo-separador{
+
+#botao-espaco, .botao-qrcode {
     display: flex;
     justify-content: center;
+}
+
+
+
+.qrcode img {
+    width:130px
+}
+
+/* MOBILE */
+#textoinfocompleto {
+    display: none;
+}
+
+.infos .espaco{
+    display: flex;
+    justify-content: center;
+    margin-top: -4rem;
+}
+
+#o-dia-que{
+    margin-left: 0.6rem;
+    margin-right: 1.8rem;
+}
+
+#tomar-uma{
+    margin-top: -.5rem;
+}
+
+
+.local {
+    display: flex;
+    justify-content: center;
+}
+
+.mapouter {position:relative;text-align:right;width:70vw;height:60vw;}
+.gmap_canvas {overflow:hidden;background:none!important;width:70vw;height:60vw;}
+.gmap_iframe {width:70vw!important;height:60vw!important;}
+
+a {
+    text-decoration: none;
+    list-style: none;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-transform: uppercase;
+    font-size: .8rem;
+    
+    height: 40px;
+    width: 200px;
+
+    border-radius: 2rem;
+    border: none;
+    
     margin-top: 1rem;
-    margin-bottom: 0rem;
-}
-
-#ultimo-texto{
-    font-size: 1rem;
 }
 
 
 
 
-/* desktop version */
+
+/* DESKTOP */
 @media (min-width:1080px) {
+    
+    #o-dia-que, #escolhemos, #tomar-uma{
+        display: none;
+    }
 
-    /* #app-container{
-        width: 100%;
-    } */
-
-    .abertura {
+    #textoinfocompleto {
         display: block;
-        width: 100%;
     }
 
+    .mapouter {position:relative;text-align:right;width:50vw;height:20vw;}
+    .gmap_canvas {overflow:hidden;background:none!important;width:50vw;height:20vw;}
+    .gmap_iframe {width:50vw!important;height:20vw!important;}
 
-    #theme-switcher + #app-container #tattoo-noite{display: none;}
-    #theme-switcher + #app-container #tattoo-dia{height: 35vw; width: auto; margin-top: 5rem; padding-top: 6vw; margin-left: 40%; margin-right: 40%;}
+    /* imagem tattoo */
+    #dark-mode + .main #tattoo-noite{display: none;}
+    #dark-mode + .main #tattoo-dia{display:block; margin-top: 4rem; width: 20vw; height: auto;}
 
-    #theme-switcher:checked + #app-container #tattoo-dia{display: none;}
-    #theme-switcher:checked + #app-container #tattoo-noite{height: 35vw; width: auto; margin-top: 5rem; padding-top: 6vw; margin-left: 40%; margin-right: 40%;}
+    #dark-mode:checked + .main #tattoo-dia{display: none;}
+    #dark-mode:checked + .main #tattoo-noite{display:block ; margin-top: 4rem; width: 20vw; height: auto;}
 
-
-    .tituloA {
-        margin-top: -23vw;
-
-        font-family: 'Homemade Apple';
-        font-style: normal;
-        font-weight: 400;
+    /* TEXTOS */
+    #casal {
         font-size: 5vw;
-        /* line-height: 138px; */
-        text-align: center;
+        margin-top: -20vw;
     }
-    .data{
-        margin-top: -5vw;
-        font-size:1.5vw;
+    #data {
+        font-size: 1.5vw;
+        margin-top: -5.5vw;
+        margin-bottom: 2rem; 
     }
-        
-
-    .abertura .textoA {
-        margin-left: 25%;
-        margin-right: 25%;
-        width: 50%;
-        margin-top: 20vw;
-
-
-    }
-
     .textoA {
         font-size: 1.5vw;
-        letter-spacing: 0.rem;
+        line-height: 130%;
+        letter-spacing: 0.035em;
+    } 
+    .abertura .textoA {
+        margin-top: 14vw;
     }
-
-    .textoB {
-        font-size: 1.5vw;
-        letter-spacing: 0.rem;
-        font-weight: 600;
+    .textoA .destaque{
+        font-size: 1.8vw;
     }
-
-    .separador{
-        height: 3vw;
-        margin-top: 3vw;
-        margin-bottom: 3vw;
-    }
-
-    .infos {
-        display: block;
-    }
-
-    .infos .tituloA{
-        margin-top: 4vw;
+    .tituloA {  
         font-size: 3vw;
+        line-height: 78px;
     }
-
-    #textoinfocompleto{
-        display: block;
+    .abertura .textoA {
+        width: 58vw;
     }
-
-    #o-dia-que{
-        display: none;
-    }
-
-    #escolhemos{
-       display: none;
-    }
-
-    #tomar-uma{
-        display: none;
-    }
-
-    .local {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 2vw;
-        margin-bottom: 1rem;
-        
-    }
-
-    .mapouter {position:relative;text-align:right;width:600px;height:400px;}
-    .gmap_canvas {overflow:hidden;background:none!important;width:600px;height:400px;}
-    .gmap_iframe {width:600px!important;height:400px!important;}
-
-
-    #botao-espaco{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-
     .button {
+        font-size: 1rem;
+        height: 3vw;
+        width: 20vw;
+        border-radius: 5rem;
+    }
+    #button2{
+        width: 13vw;
+    }
+
+    .qrcode img {
+        width:13vw
+    }
+
+    .cont-presentes{
         display: flex;
         justify-content: center;
-        align-items: center;
-    
-        background-color: var(--color-2);
-        color: #FFFFFFA6;
-    
-        text-transform: uppercase;
-        font-size: 1.5vw;
-        font-weight: 500;
-        
-        height: 4vw;
-        width: 23vw;
-    
-        border-radius: 3rem;
-    
-        margin-top: 1rem;
+        flex-wrap: wrap;
     }
-
-    .button:hover{
-        background-color: var(--color-3);
-        cursor: pointer;
-    }
-
-    .button:active {
-        background-color: var(--color-4);
-        cursor: pointer;
-    }
-
-    #lembrete {
-        margin-top: 2rem;
-        width: 40vw;
-    }
-
-    .presentes1 .tituloA {
-        font-size: 4vw;
-        width: 40%;
-        margin-top: 5vw;
-    }
-
-    .presentes1 .textoA{
-        margin-top: -4vw;
-    }
-
-    .qrcode {
-        height: 15vw;
-        margin-top: -1vw;
-
-    }
-    
-    .qrcode img {
-    width:180px
-}
-
-
-    #button2 {
-        font-size: 1.5vw;
-        
-        height: 4vw;
-        width: 16vw;
-    
-        border-radius: 3rem;
-    }
-
-    #button2:hover{
-        background-color: var(--color-3);
-        cursor: pointer;
-    }
-    #button2:active {
-        background-color: var(--color-4);
-        cursor: pointer;
-    }
-
     .lista-presentes {
-        margin-top: 4vw;
-        margin-left: 20%;
-        margin-right: 20%;
+        width: 60%;
     }
+    
 
     .presente img {
-        width: 13vw;
+        width: 12vw;
         height: auto;
-        margin-top: 1vw;
+        border-radius: 20px;
+        border: .5px solid #fff;
+        background-color: #fff;
+        margin-top: 1.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
     
     .lista-presentes p {
-        width: 13vw;
-        height: 3vw;
-        font-size: 1.5vw;
-        border-radius: 3vw;
+        margin-top: .2rem;
+      
+        font-size: 1.3vw;
+        
+        width: 12vw;
+        height: 2vw;
+        border-radius: 5vw;
+    }
+    .titulo-grande {
+        display: flex;
+    }
+    .titulo-grande .tituloA{
+        font-size: 4.5rem;
+        width: 35%;
+        line-height: 4vw;
+    }
+    .presentes1 .sans-serif {
+        margin-top: -4rem;
     }
 
-    .ultimo-separador{
-        margin-top: 3vw;
+    .lembrete .textoA{
+        width: 45vw;
     }
-
-    #ultimo-texto{
-        font-size: 2rem;
-    }
-
+    
 }
+
+
+
+
+
+
+
+/* BASE */
+/* <input type="checkbox" id="dark-mode" value="dark-mode-value" name="dark-mode-name" class="botao-dark"> */
+
+
+.switch {
+    position: absolute;
+    display: inline-block;
+    margin-top: 2rem;
+    width: 48px;
+    height: 23px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 1px;
+    bottom: 4.5px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
