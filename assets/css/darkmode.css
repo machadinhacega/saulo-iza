@@ -1,0 +1,87 @@
+/* background */
+#dark-mode + .main {background-color:#ffffff; background-image: url(../img/ONDAS.png);}
+#dark-mode:checked + .main {background-color: #0D0D0D; background-image: url(../img/ONDAS-dark.png);}
+
+/* texto */
+#dark-mode + .main .tituloA {color:var(--color-1);}
+#dark-mode + .main .textoA {color:var(--color-5);}
+#dark-mode + .main #data {color:var(--color-1);}
+#dark-mode + .main .destaque {color:var(--color-4);}
+#dark-mode + .main .sans-serif {color:var(--color-1);}
+#dark-mode + .main .presente p {color:var(--color-1);}
+
+#dark-mode:checked + .main .tituloA {color:var(--color-2);}
+#dark-mode:checked + .main .textoA {color:var(--color-2);}
+#dark-mode:checked + .main #data {color:var(--color-2);}
+#dark-mode:checked + .main .destaque {color:var(--color-3);}
+#dark-mode:checked + .main .sans-serif {color:var(--color-2);}
+#dark-mode:checked + .main .presente p {color:var(--color-2);}
+
+/* botões */
+#dark-mode + .main .button{
+    background-color: var(--color-1);
+    color:var(--color-2);
+    cursor: pointer;}
+#dark-mode + .main .button:hover{
+    background-color: var(--color-3);
+    color:var(--color-2);
+    cursor: pointer;}
+#dark-mode + .main .button:active{
+    background-color: var(--color-4);
+    color:var(--color-2);
+    cursor: pointer;}
+
+    #dark-mode:checked + .main .button{
+        background-color: var(--color-2);
+        color:var(--dark);
+        cursor: pointer;}
+    #dark-mode:checked + .main .button:hover{
+        background-color: var(--color-3);
+        color:var(--color-2);
+        cursor: pointer;}
+    #dark-mode:checked + .main .button:active{
+        background-color: var(--color-4);
+        color:var(--color-2);
+        cursor: pointer;}
+
+/* imagem tattoo */
+#dark-mode + .main #tattoo-noite{display: none;}
+#dark-mode + .main #tattoo-dia{display:block; margin-top: 5rem; width: 220px; height: auto;}
+
+#dark-mode:checked + .main #tattoo-dia{display: none;}
+#dark-mode:checked + .main #tattoo-noite{display:block ; margin-top: 5rem; width: 220px; height: auto;}
+
+.barra-final {background: linear-gradient(180deg, --color-2, #ffffff 100%);height: 1rem;}
+
+
+
+/* botão trocar modo de cor */
+
+#dark-mode {
+    position: fixed;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 15px;
+    top: 25px;
+    background-color: rgb(255, 255, 255);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+    cursor: pointer;
+}
+
+
+#dark-mode:before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    left: -5px;
+    top: -4px;
+    background-image: url(../img/dark.svg);
+    background-color: #0D0D0D;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
