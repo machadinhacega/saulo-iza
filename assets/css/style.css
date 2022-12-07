@@ -289,6 +289,10 @@ a {
     justify-content: center;
 }
 
+.qrcode img {
+    width:130px
+}
+
 .dress{
     width: 100%;
 }
@@ -547,6 +551,11 @@ a {
         margin-top: -1vw;
 
     }
+    
+    .qrcode img {
+    width:180px
+}
+
 
     #button2 {
         font-size: 1.5vw;
