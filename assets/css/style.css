@@ -142,17 +142,27 @@ body {
 }
 
 .presente {
+    display: grid;
+    justify-items: center;
     margin-left: .7rem;
     margin-right: .7rem;
     margin-top: 1rem;
 }
 
-.presente img {
+.imagem-bg{
+    display: flex;
+    justify-content: center;
     width: 90px;
-    height: auto;
+    height: 90px;
     border-radius: 20px;
     border: .5px solid #fff;
     background-color: #fff;
+}
+
+.presente img {
+    max-width: 90px;
+    max-height: 90px;
+    border-radius: 20px;
 }
 
 .lista-presentes p {
@@ -163,7 +173,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -.2rem;
+    margin-top: 1rem;
   
     font-size: .7rem;
     
@@ -283,20 +293,25 @@ a {
         width: 60%;
     }
     
-
-    .presente img {
+    .imagem-bg{
+        display: flex;
+        justify-content: center;
         width: 12vw;
-        height: auto;
+        height: 12vw;
         border-radius: 20px;
-        border: .5px solid #fff;
-        background-color: #fff;
         margin-top: 1.5rem;
         margin-left: 1rem;
         margin-right: 1rem;
     }
     
+    .presente img {
+        max-width: 12vw;
+        max-height: 12vw;
+        border-radius: 20px;
+    }
+    
     .lista-presentes p {
-        margin-top: .2rem;
+        margin-top: 2rem;
       
         font-size: 1.3vw;
         
