@@ -1,0 +1,38 @@
+[
+    {
+      "produto": "Fogão",
+      "preco": "R$ 1.300,00",
+      "link": "https://www.magazineluiza.com.br/fogao-consul-4-bocas-preto-com-mesa-de-vidro-e-grades-individuais-de-ferro-fundido-cfo4vae/p/he04h69ba1/ed/fg4b/",
+      "imagem": "https://imgs.ponto.com.br/55026350/1xg.jpg"
+    },
+    {
+      "produto": "Geladeira",
+      "preco": "R$ 2.500,00",
+      "link": "www.casasbahia.com.br/geladeira-consul-frost-free-crb39ak-com-gavetao-hortifruti-e-congelador-espacoso-inox-342l-10153510/p/10153510",
+      "imagem": "https://imgs.casasbahia.com.br/10153510/1xg.jpg"
+    },
+    {
+      "produto": "2000ml - Oikos",
+      "preco": "R$ 48,90",
+      "link": "https://www.amazon.com.br/dp/B084D2HX7B/?coliid=I2ZRR8L0A8LB5U&colid=1355Y73KUZNGL&psc=1&ref_=lv_ov_lig_dp_it",
+      "imagem": "https://m.media-amazon.com/images/I/516VsuHve2L._AC_SL1500_.jpg"
+    },
+    {
+      "produto": "1100ml - Oikos",
+      "preco": "R$ 32,90",
+      "link": "https://www.amazon.com.br/dp/B084D26MWQ/?coliid=I18SCN1KIYMWAU&colid=1355Y73KUZNGL&psc=1&ref_=lv_ov_lig_dp_it",
+      "imagem": "https://m.media-amazon.com/images/I/51AaE8eVWxL._AC_SL1500_.jpg"
+    },
+    {
+      "produto": "600ml - Oikos",
+      "preco": "R$ 24,45",
+      "link": "https://www.amazon.com.br/dp/B083M98XHB/?coliid=I3PTVBT6RIARCU&colid=1355Y73KUZNGL&psc=1&ref_=lv_ov_lig_dp_it",
+      "imagem": "https://m.media-amazon.com/images/I/41lX7Kzf78S._AC_SL1120_.jpg"
+    },
+    {
+      "produto": "",
+      "preco": "R$ 247,00",
+      "link": "https://shopee.com.br/product/349219205/7677062703?smtt=0.419542340-1656955033.3",
+      "imagem": "https://cf.shopee.com.br/file/ac5095a4e1dc83cec56ca034da045f07"
+    }
+  ]
