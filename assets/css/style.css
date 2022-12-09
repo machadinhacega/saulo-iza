@@ -156,7 +156,7 @@ body {
     height: 90px;
     border-radius: 20px;
     border: .5px solid #fff;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
 }
 
 .presente img {
@@ -164,6 +164,7 @@ body {
     max-height: 90px;
     border-radius: 20px;
 }
+
 
 .lista-presentes p {
     font-family: 'Armata';
@@ -309,7 +310,7 @@ a {
         max-height: 12vw;
         border-radius: 20px;
     }
-    
+
     .lista-presentes p {
         margin-top: 2rem;
       
