@@ -190,6 +190,10 @@ body {
     justify-content: center;
 }
 
+#copiado {
+    display: none;
+}
+
 .qrcode img {
     width:130px
 }
