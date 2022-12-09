@@ -62,6 +62,11 @@
 
 #dark-mode:checked + .main .comprado{filter: brightness(30%);}
 
+/* separador */
+#dark-mode + .main #sol{display: grid;}
+#dark-mode + .main #lua{display: none;}
+#dark-mode:checked + .main #sol{display: none;}
+#dark-mode:checked + .main #lua{display: grid;}
 
 
 

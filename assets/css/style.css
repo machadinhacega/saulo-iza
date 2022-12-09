@@ -74,6 +74,10 @@ body {
     margin-bottom: 1rem;
 }
 
+.separador img {
+    width: 8vw;
+}
+
 .texto-abertura{
     display: flex;
     justify-content: center;
@@ -228,6 +232,10 @@ a {
 
 @media (min-width:1080px) {
     
+    .separador img {
+        width: 3vw;
+    }
+
     #o-dia-que, #escolhemos, #tomar-uma{
         display: none;
     }
