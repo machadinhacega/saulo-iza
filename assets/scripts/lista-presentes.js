@@ -43,13 +43,25 @@ function carregarPresentes(listaPresentes) {
         let preco = el.preco;
         let link = el.link;
         let imagem = el.imagem;
-        let presente = `
-        <div class="presente">
-            <div class="imagem-bg">
-                <a href="${link}" target="_blank"><img src="${imagem}" alt=""></a>
-            </div>
-            <p>${preco}</p>
-        </div>`;
+        let presente = ''
+        if(preco == 'comprado') {
+            presente = `
+            <div class="presente">
+                <div class="imagem-bg comprado">
+                    <img src="${imagem}" alt="">
+                </div>
+                <p>Ganhamos!</p>
+            </div>`;
+
+        }else{
+            presente = `
+            <div class="presente">
+                <div class="imagem-bg">
+                    <a href="${link}" target="_blank"><img src="${imagem}" alt=""></a>
+                </div>
+                <p>${preco}</p>
+            </div>`;
+        } 
         presentes_container.innerHTML += presente;
     });
 }
