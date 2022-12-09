@@ -74,6 +74,10 @@ body {
     margin-bottom: 1rem;
 }
 
+.separador img {
+    width: 8vw;
+}
+
 .texto-abertura{
     display: flex;
     justify-content: center;
@@ -156,7 +160,7 @@ body {
     height: 90px;
     border-radius: 20px;
     border: .5px solid #fff;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
 }
 
 .presente img {
@@ -164,6 +168,7 @@ body {
     max-height: 90px;
     border-radius: 20px;
 }
+
 
 .lista-presentes p {
     font-family: 'Armata';
@@ -187,6 +192,10 @@ body {
 #botao-espaco, .botao-qrcode {
     display: flex;
     justify-content: center;
+}
+
+#copiado {
+    display: none;
 }
 
 .qrcode img {
@@ -223,6 +232,10 @@ a {
 
 @media (min-width:1080px) {
     
+    .separador img {
+        width: 3vw;
+    }
+
     #o-dia-que, #escolhemos, #tomar-uma{
         display: none;
     }
@@ -309,7 +322,7 @@ a {
         max-height: 12vw;
         border-radius: 20px;
     }
-    
+
     .lista-presentes p {
         margin-top: 2rem;
       
