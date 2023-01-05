@@ -17,6 +17,23 @@
 #dark-mode:checked + .main .sans-serif {color:var(--color-2);}
 #dark-mode:checked + .main .presente p {color:var(--color-2);}
 
+
+
+#dark-mode + .main .mensagem-nome {color:var(--color-1);}
+#dark-mode + .main .mensagem-texto {color:var(--color-1);}
+
+#dark-mode:checked + .main .mensagem-nome {color:var(--color-2);}
+#dark-mode:checked + .main .mensagem-texto {color:var(--color-2);}
+
+
+
+
+
+#dark-mode + .main .mensagem-unidade {border-bottom: 0.5px dashed var(--color-1);}
+#dark-mode:checked + .main .mensagem-unidade {border-bottom: 0.5px dashed var(--color-2);}
+
+
+
 /* botões */
 #dark-mode + .main .button{
     background-color: var(--color-1);

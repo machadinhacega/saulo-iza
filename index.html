@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Icone e Nome da página -->
-    <link rel="icon" href="./assets/img/sol.png">
+    <link rel="icon" href="./assets/img/sol.svg">
     <title>Saulo e Iza</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Armata&family=Homemade+Apple&family=Sorts+Mill+Goudy:ital@0;1&display=swap" rel="stylesheet">
@@ -47,8 +47,8 @@
 
 
 
-        <div class="separador" id="sol"> <img src="./assets/img/sol.png" alt=""></div>
-        <div class="separador" id="lua"> <img src="./assets/img/dark.svg" alt=""></div>
+        <div class="separador" id="sol"> <img src="./assets/img/sol.svg" alt=""></div>
+        <div class="separador" id="lua"> <img src="./assets/img/lua.svg" alt=""></div>
 
 
 
@@ -82,8 +82,8 @@
         </section>
 
 
-        <div class="separador" id="sol"> <img src="./assets/img/sol.png" alt=""></div>
-        <div class="separador" id="lua"> <img src="./assets/img/dark.svg" alt=""></div>
+        <div class="separador" id="sol"> <img src="./assets/img/sol.svg" alt=""></div>
+        <div class="separador" id="lua"> <img src="./assets/img/lua.svg" alt=""></div>
 
 
 
@@ -92,11 +92,7 @@
             <p class="textoA" id="lembrete"> ah, e se quiser dar um presentinho pra nossa casa nova, nós separamos algumas sugestões:</p>
         </div>
         <div class="presentes1">
-            <div class="titulo-grande"><p class="tituloA">Lista de presentes</p></div>
-            <p class="sans-serif">Vem de pix:</p>
-            <div class="qrcode"><img src="./assets/img/qrcode.jpg" alt=""></div>
-            <div class="botao-qrcode" onclick="copyToClickBoard()"><button class="button" id="button2"><p id="copiar">copiar código</p><p id="copiado">código copiado</p></button></div>
-            <p id="chave">00020126580014BR.GOV.BCB.PIX013606910aa3-d6a3-4f6a-a667-b4a62ee7ae8b5204000053039865802BR5925Iza Vanessa da Silva Mach6009SAO PAULO61080540900062070503***63046E4B</p>    
+            <div class="titulo-grande"><p class="tituloA">Lista de presentes</p></div>   
         </div>
 
 
@@ -104,15 +100,74 @@
             <section class="lista-presentes">
                 
             </section>
+        </div>
 
+        <section class="secao-qr">
+            <div class="container-qr">
+                <div class="qrcode"><img src="./assets/img/qrcode.jpg" alt=""></div>
+                <p class="sans-serif" id="explica">Se quiser presentar por pix basta copiar o qr code ao lado e escolher um valor</p>
+            </div>
+        </section>
+
+        <div class="botao-qrcode" onclick="copyToClickBoard()">
+            <button class="button" id="button2">
+                <p id="copiar">copiar código</p>
+                <p id="copiado">código copiado</p>
+            </button>
+        </div>
+
+        <p id="chave">00020126580014BR.GOV.BCB.PIX013606910aa3-d6a3-4f6a-a667-b4a62ee7ae8b5204000053039865802BR5925Iza Vanessa da Silva Mach6009SAO PAULO61080540900062070503***63046E4B</p>    
+
+        
+    <div class="separador" id="sol"> <img src="./assets/img/sol.svg" alt=""></div>
+    <div class="separador" id="lua"> <img src="./assets/img/lua.svg" alt=""></div>
+    
+    
+    <div class="titulo-grande"><p class="tituloA" id="escreva-mensagem">Depoimentos do orkut</p></div>   
+    <section class="container-form">
+        <form class="form-mensagem" id="formulario-mensagem" enctype="text/plain">
+            <input type="text" id="nome" name="name" class="nome" placeholder="Nome" required>
+            <textarea name="body" id="mensagem" class="mensagem" cols="30" rows="7" placeholder=""  required></textarea>
+        </form>
+    </section>
+
+
+    <div class="botao-qrcode" onclick="enviado()">
+        <button class="button" id="botao-mensagem" onclick="enviarMensagem()">
+            <p id="enviar">Seja o topo</p>
+            <p id="enviado">Você é o topo</p>
+        </button>
+    </div>
     
 
-        </div>
+<section class="mensagens-espaco">
+    
+    <div class="mensagem-unidade">
+        <p class="mensagem-nome">Estela e Schaffer</p>
+        <p class="mensagem-texto">Então vamos adiantar o presente de casamento, mas n conseguimos decidir o q dar kkkkk então vamos dar na forma de pix, pra  dar algum help ai na mudança.</p>    
+    </div>
+
+    <div class="mensagem-unidade">
+        <p class="mensagem-nome">Estela e Schaffer</p>
+        <p class="mensagem-texto">Então vamos adiantar o presente de casamento, mas n conseguimos decidir o q dar kkkkk então vamos dar na forma de pix, pra  dar algum help ai na mudança.</p>    
+    </div>
+
+
+    <div class="mensagem-unidade">
+        <p class="mensagem-nome">Estela e Schaffer</p>
+        <p class="mensagem-texto">Então vamos adiantar o presente de casamento, mas n conseguimos decidir o q dar kkkkk então vamos dar na forma de pix, pra  dar algum help ai na mudança.</p>    
+    </div>
+
+
+</section>
+
+
+
         <section class="rodape">
-            <div class="separador" id="sol"> <img src="./assets/img/sol.png" alt=""></div>
-            <div class="separador" id="lua"> <img src="./assets/img/dark.svg" alt=""></div>
-     
+            <div class="separador" id="sol"> <img src="./assets/img/sol.svg" alt=""></div>
+            <div class="separador" id="lua"> <img src="./assets/img/lua.svg" alt=""></div>
         </section>
+
         <div class="barra-final"></div>
     </div>
     
