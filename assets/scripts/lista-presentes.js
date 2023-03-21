@@ -50,7 +50,7 @@ function carregarPresentes(listaPresentes) {
                 <div class="imagem-bg comprado">
                     <img src="${imagem}" alt="">
                 </div>
-                <p>Ganhamos!</p>
+                <p>Compramos</p>
             </div>`;
 
         }else{
