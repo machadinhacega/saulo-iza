@@ -479,3 +479,8 @@ a {
     .mensagem-texto {font-size: .8rem; margin-bottom: 1.2rem;}
     
 }
+
+
+.dress {
+    min-height: 50rem;
+}
